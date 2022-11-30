@@ -17,7 +17,169 @@ body {
 @media only screen and (min-width: 360px) {
 
   p {
-    font-size: 1.2rem;
+    font-size: 0.7rem;
+  }
+
+  header {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
+  }
+
+  header h1 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+
+  main {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+   /* style for a row of boxes */
+   .boxrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: #000 solid 4px;
+    border-bottom: #000 solid 4px;
+  }
+
+  .boxrow:last-child {
+    border-top: none;
+  }
+
+  /* style for each box */
+  .box {
+    text-transform: uppercase;
+    position: relative;
+    padding: 2rem;
+    height: 22.5vh;
+    width: 50vw;
+  }
+
+  .box a {
+    text-decoration: none;
+    color: #000;
+  }
+
+/*   .box:first-child {
+    border-left: none;
+  } */
+
+  .box:nth-last-child(n+1) {
+    border-right: none;
+  }
+
+/*   .box:last-child {
+    border-right: none;
+  } */
+
+  p.box-text {
+    margin-top: 2rem;
+  }
+
+  /* style for texts with 2 columns */
+  .two-column {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 10rem;
+    line-height: 3rem;
+  }
+
+  .signup-box, .login-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+
+  .signup-box form, .login-box form {
+    height: 60%;
+    width: 80%;
+    padding: 0 2rem;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .login-box form {
+    height: 55%;
+  }
+
+  .signup-box form > input, .login-box form > input {
+    border: #000 2px solid;
+    padding: 0.5rem;
+  }
+
+  .signup-box form > button, .login-box form > button {
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  .signup-box form > input, form > button, .login-box form > input, form > button {
+    width: 100%;
+  }
+
+  .signup-box h3, .login-box h3 {
+    margin-top: 0;
+  }
+
+  #image-box {
+    background-image: url(images/me.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  a.bottom-text {
+    position: absolute;
+    bottom: 2rem;
+  }
+
+  .contact-info {
+    margin-top: 8rem;
+  }
+
+  .box h3 {
+    margin-top: 2rem;
+    font-weight: 500;
+  }
+  
+  .box h4 {
+    font-weight: 400;
+  }
+  
+  .box h5 {
+    font-weight: 300;
+  }
+
+  footer {
+    height: 5vh;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2.5rem;
+  }
+
+  footer h1 {
+    text-transform: uppercase;
+  }
+
+  footer a {
+    color: black;
   }
 
 }
