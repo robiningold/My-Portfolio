@@ -1,3 +1,38 @@
+<?php
+
+  session_start();
+
+  include("connection.php");
+  include("functions.php");
+
+  //check if the user clicked on the post button
+  if($_SERVER['REQUEST_METHOD'] == "POST") {
+
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+    /* $password_repeat = $_POST['passsword-repeat']; */
+
+    //check if the inputs aren't empty
+    if(!empty($username) && !empty($password)) {
+
+      //save to database
+      $query = "insert into users (username, password) values ('$username', '$password')";
+
+      mysqli_query($con, $query);
+
+      header("Location: login.php");
+      die;
+
+    } else {
+
+      echo "Please enter some valid information!";
+
+    }
+
+  }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,15 +57,16 @@
         <h2><a href="index.php">&#9664; back home</a></h2>
       </div>
       <div class="box signup-box">
-        <h2>sign up</h2>
-        <form action="includes/signup-inc.php" method="post">
+        <h2>signup</h2>
+        <form method="post">
           <h3>username</h3>
-          <input type="text" name="username" placeholder="username" id="username">
+          <input type="text" name="username" placeholder="username" id="text">
           <h3>password</h3>
-          <input type="password" name="pwd" placeholder="password" id="password">
-          <h3>confirm password</h3>
-          <input type="password" name="pwd-repeat" placeholder="confirm password" id="password-repeat">
-          <button type="submit">sign up</button>
+          <input type="password" name="password" placeholder="password" id="text">
+          <!-- <h3>confirm password</h3>
+          <input type="password" name="password-repeat" placeholder="confirm password" id="password-repeat"> -->
+          <button type="submit">sign up</button></br>
+          <a href="login.php">login</a>
         </form>
       </div>
       <div class="box">
