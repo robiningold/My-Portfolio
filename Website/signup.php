@@ -1,5 +1,5 @@
 <?php
-
+/* 
   session_start();
 
   include("connection.php");
@@ -10,13 +10,14 @@
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-    /* $password_repeat = $_POST['passsword-repeat']; */
+    $password_repeat = $_POST['passsword-repeat'];
 
     //check if the inputs aren't empty
     if(!empty($username) && !empty($password)) {
 
       //save to database
-      $query = "insert into users (username, password) values ('$username', '$password')";
+      $hash = password_hash($password, PASSWORD_DEFAULT);
+      $pdo->prepare(insert into users (username, password) values ('$username', '$hash'));
 
       mysqli_query($con, $query);
 
@@ -30,7 +31,7 @@
     }
 
   }
-
+ */
 ?>
 
 <!DOCTYPE html>

@@ -1,12 +1,5 @@
 <?php
-
   session_start();
-
-  include("connection.php");
-  include("functions.php");
-
-  $user_data = check_login($con);
-
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +16,19 @@
   <!-- header -->
   <header>
     <?php
-      include 'header.php';
+      if(isset($_SESSION["userid"])){
+    ?>
+      <h1>robin ingold</h1>
+      <p>Hello, <?php echo $_SESSION['username']; ?></p>
+      <a href="logout.php">Logout</a>
+      <h1>web design & development</h1>
+    <?php
+    } else {
+    ?>
+      <h1>robin ingold</h1>
+      <h1>web design & development</h1>
+    <?php
+      }
     ?>
   </header>
   <main>

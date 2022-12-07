@@ -1,51 +1,5 @@
 <?php
-
   session_start();
-
-  include("connection.php");
-  include("functions.php");
-
-  //check if the user clicked on the post button
-  if($_SERVER['REQUEST_METHOD'] == "POST") {
-
-    $username = $_POST['username'];
-    $password = $_POST['password'];
-    /* $password_repeat = $_POST['passsword-repeat']; */
-
-    //check if the inputs aren't empty
-    if(!empty($username) && !empty($password)) {
-
-      //read from database
-      $query = "select * from users where username = '$username' limit 1";
-
-      $result = mysqli_query($con, $query);
-
-      if ($result) {
-        
-        if($result && mysqli_num_rows($result) > 0) {
-
-          $user_data = mysqli_fetch_assoc($result);
-          if($user_data['password'] === $password) {
-
-            header("Location: login.php");
-            die;
-
-          }
-  
-        }
-
-      }
-
-      echo "Please enter the correct username and/or password!";
-
-    } else {
-
-      echo "Please enter some valid information!";
-
-    }
-
-  }
-
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +16,20 @@
   <!-- header -->
   <header>
     <?php
-      include 'header.php';
+      if(isset($_SESSION["userid"])){
+        ?>
+          <h1>robin ingold</h1>
+          <p>Hello, <?php echo $_SESSION['username']; ?></p>
+          <a href="logout.php">Logout</a>
+          <h1>web design & development</h1>
+      <?php
+      } else {
+      ?>
+        <h1>robin ingold</h1>
+        <h1>web design & development</h1>
+      <?php
+        }
+      ?>
     ?>
   </header>
   <main>
@@ -75,14 +42,27 @@
         <h2>login</h2>
         <form method="post">
           <h3>username</h3>
-          <input type="text" name="username" placeholder="username" id="username">
+          <input type="text" name="uid" placeholder="username">
           <h3>password</h3>
-          <input type="password" name="password" placeholder="password" id="password">
-          <button type="submit">login</button></br>
-          <a href="signup.php">sign up</a>
+          <input type="password" name="pwd" placeholder="password">
+          <button type="submit" name="submit">login</button></br>
+          <!-- <a href="signup.php">sign up</a> -->
         </form>
       </div>
-      <div class="box">
+      <div class="box signup-box">
+        <h2>signup</h2>
+        <form method="post">
+          <h3>username</h3>
+          <input type="text" name="uid" placeholder="username">
+          <h3>email</h3>
+          <input type="email" name="email" placeholder="email">
+          <h3>password</h3>
+          <input type="password" name="pwd" placeholder="password">
+          <h3>confirm password</h3>
+          <input type="password" name="pwdRepeat" placeholder="confirm password">
+          <button type="submit" name="submit">sign up</button></br>
+          <!-- <a href="login.php">login</a> -->
+        </form>
       </div>
       <div class="box">
         
