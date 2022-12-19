@@ -8,7 +8,6 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
 
     $username = $_POST['username'];
     $password = $_POST['password'];
-    /* $password_repeat = $_POST['passsword-repeat']; */
 
     //check if the inputs aren't empty
     if($username !== '' && $password !== '') {

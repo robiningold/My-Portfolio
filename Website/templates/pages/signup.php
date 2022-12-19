@@ -8,10 +8,7 @@
             <h3>username</h3>
             <input type="text" name="username" placeholder="username" />
             <h3>password</h3>
-            <input type="password" name="password" placeholder="password" />
-            <!-- <h3>confirm password</h3>
-            <input type="password" name="password-repeat" placeholder="confirm password" id="password-repeat"> -->
-            <button type="submit">sign up</button></br>
+            <input type="password" name="password" placeholder="password" /><button type="submit">sign up</button></br>
             <a href="/login">login</a>
         </form>
     </div>

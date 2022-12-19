@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/functions/functions.js"></script>
     <link href="https://fonts.cdnfonts.com/css/bahnschrift" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/style.css" />
     <title><?= $title; ?></title>

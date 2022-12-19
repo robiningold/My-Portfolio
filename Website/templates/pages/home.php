@@ -47,7 +47,7 @@
             <p>
                 sumpfstrasse 21<br />
                 4554 etziken<br /><br /><br />
-                <a href="mailto: info@robin-ingold.ch">info@robin-ingold.ch</a><br />
+                <a href="mailto:info@robin-ingold.ch">info@robin-ingold.ch</a><br />
                 +41 79 852 17 20
             </p>
         </div>

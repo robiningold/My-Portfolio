@@ -162,6 +162,19 @@ body {
         font-weight: 300;
     }
 
+    #create-project.hidden {
+      display: none;
+    }
+    
+    #create-project.active {
+      display: block;
+    }
+
+    #create-project input{
+      border: #000 2px solid;
+      padding: 0.5rem;
+    }
+
     footer {
         height: 5vh;
         width: 100vw;
@@ -393,7 +406,7 @@ body {
         text-transform: uppercase;
         position: relative;
         border-left: #000 solid 4px;
-        padding: 2rem;
+        padding: 1rem;
         height: 40vh;
         width: 25vw;
         overflow: auto;
@@ -424,7 +437,7 @@ body {
         flex-wrap: wrap;
         align-items: flex-start;
         gap: 10rem;
-        line-height: 3rem;
+        line-height: 2rem;
     }
 
     .signup-box, .login-box {
@@ -438,7 +451,7 @@ body {
         height: 60%;
         width: 80%;
         padding: 0 2rem;
-        margin-top: 3rem;
+        margin-top: 1rem;
         display: flex;
         flex-direction: column;
     }
@@ -485,15 +498,18 @@ body {
     }
 
     .box h3 {
-        margin-top: 2rem;
+        font-size: .9rem;
+        margin-top: 1.5rem;
         font-weight: 500;
     }
 
     .box h4 {
+        font-size: .7rem;
         font-weight: 400;
     }
 
     .box h5 {
+        font-size: .5rem;
         font-weight: 300;
     }
 
