@@ -11,7 +11,7 @@ if($_SERVER['REQUEST_METHOD'] == "POST") {
     $link = $_POST['link'];
 
     //check if the inputs aren't empty
-    if($username !== '' && $description !== '' && $link !== '') {
+    if($projectname !== '' && $description !== '' && $link !== '') {
 
         //save to database
         $db->query('insert into projects (projectname, description, link) values (:projectname, :description, :link)', [

@@ -5,15 +5,16 @@
   <div class="box">
     <?php if (isset($_SESSION['username'])): ?>
       <a href="#" onclick="showForm()"><p>[create new project]</p></a>
-      <div id="create-project" class="hidden">
+      <form method="post" action="/api/newproject.php" id="create-project" class="hidden">
         <h3>project name</h3>
         <input type="text" name="projectname" placeholder="project name" id="projectname">
         <h3>description</h3>
         <input type="text" name="description" placeholder="description" id="description">
         <h3>link</h3>
         <input type="text" name="link" placeholder="link" id="link"><br /><br />
-        <a href="/api/newproject.php" onclick="newProject()">create</a>
-      </div>
+        <a href="/api/newproject.php" onclick="newProject()"></a>
+        <button type="submit">create</button><br />
+      </form>
     <?php else: ?>
     <?php endif ?>
   </div>
