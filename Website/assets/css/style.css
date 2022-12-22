@@ -81,10 +81,9 @@ body {
     .two-column {
         display: flex;
         justify-content: flex-start;
-        flex-direction: column;
-        flex-wrap: wrap;
+        flex-direction: row;
         align-items: flex-start;
-        gap: 10rem;
+        gap: 3rem;
         line-height: 1.5rem;
     }
 
@@ -99,7 +98,6 @@ body {
         height: 60%;
         width: 80%;
         padding: 0 2rem;
-        margin-top: 3rem;
         display: flex;
         flex-direction: column;
     }
@@ -110,15 +108,15 @@ body {
 
     form > input {
         border: #000 2px solid;
-        padding: 0.5rem;
+        padding: 0.2rem;
     }
 
     form > button {
         background-color: #000;
         color: #fff;
         text-transform: uppercase;
-        padding: 0.5rem;
-        margin-top: 1rem;
+        padding: 0.2rem;
+        margin-top: 0.2rem;
         cursor: pointer;
     }
 
@@ -146,19 +144,22 @@ body {
     }
 
     .box h2 {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
 
     .box h3 {
-        margin-top: 2rem;
+        font-size: 0.7rem;
+        margin-top: 0.8rem;
         font-weight: 500;
     }
 
     .box h4 {
+        font-size: 0.5rem;
         font-weight: 400;
     }
 
     .box h5 {
+        font-size: 0.4rem;
         font-weight: 300;
     }
 
